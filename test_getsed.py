@@ -4,7 +4,7 @@ from hyperion.model import ModelOutput
 from hyperion.util.constants import pc
 
 # Open the model - we specify the name without the .rtout extension
-m = ModelOutput('test_disc.rtout')
+m = ModelOutput('test_disc2.rtout')
 
 # Extract the SED for the smallest inclination and largest aperture, and
 # scale to 300pc. In Python, negative indices can be used for lists and
@@ -13,4 +13,4 @@ m = ModelOutput('test_disc.rtout')
 wav, nufnu = m.get_sed(inclination=9, aperture=-1, distance=300 * pc)
 
 # Write out the SED to file
-np.savetxt('sed.txt', zip(wav, nufnu), fmt="%11.4e %11.4e")
+np.savetxt('sed2.txt', zip(wav, nufnu), fmt="%11.4e %11.4e")
